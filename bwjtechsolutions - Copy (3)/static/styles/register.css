@@ -1,0 +1,31 @@
+body{
+        background-color: #ecf0f1;
+}
+
+.dob{
+        position:absolute;
+        margin-left: 8%;
+        margin-top: 1%;
+        font-weight: bold;
+}
+
+.resume{
+        position:absolute;
+        margin-left: 4%;
+        margin-top: 1%;
+        font-weight: bold;
+}
+
+.submit{
+        background-color:#0080FA;
+        color:white;
+        font-weight: bold;
+        width:20%;
+        border-radius: 5px;
+        margin-left: 0px;
+       margin-bottom: 5%;
+}
+
+.txtp{
+        margin-top: 10%;
+}

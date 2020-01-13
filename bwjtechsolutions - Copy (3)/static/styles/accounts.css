@@ -1,0 +1,118 @@
+.headpart{
+   background-color:black;
+   color:black;
+   top:0px;
+   left:0px;
+   position:absolute;
+   padding:0px;
+   width:100%;
+}
+.treatlist caption{
+    background-color:black;
+    color:#cc5200;
+    text-shadow:0px 0px 2px #cc5200,0px 0px 2px #cc5200;
+    font-size:1.5em;
+    border-radius:20px;
+    margin:20px 7px 30px 7px;
+    box-shadow:0px 0px 10px blue,0px 0px 10px blue,0px 0px 10px blue,0px 0px 10px blue,0px 0px 10px blue;
+}
+.treatlist{
+    min-width:700px;
+    border-collapse:collapse;
+    position:absolute;
+    top:28%;
+    left:21%;
+    box-shadow:0px 0px 10px blue;
+    border-radius:20px;
+    overflow:hidden;
+}
+.loutapp{
+        color:#cc5200;
+}
+.htg{
+     font-size:2em;
+     color:blue;
+     background:orange;
+     width:50%;
+     position:absolute;
+     left:40%;
+     top:40%;
+}
+.treatlist thead tr{
+    background-color:black;
+    color:white;
+    text-shadow:0px 0px 5px white;
+    text-align:left;
+    font-size:1.4em;
+}
+.treatlist th,
+.treatlist td{
+       padding:9px 0px 10px 50px;
+       border-radius:60px;
+}
+.treatlist tbody tr{
+     border-bottom: 1px solid #202020;
+     background-color:black;
+     color:white;
+     font-size:1em;
+     opacity:.9;
+}
+.treatlist tbody tr:nth-of-type(even){
+     background-color:black;
+     border-bottom: 1px solid #202020;
+}
+
+.treatlist tbody tr:last-of-type{
+     border-bottom:0px solid #202020;
+}
+.submi{
+   font-size:1em;
+   font-weight:bold;
+   position:absolute;
+   background-color:#02f022;
+   border-radius:20px;
+   padding:15px;
+   top:86%;
+   left:47%;
+   outline:none;
+}
+
+.submi:hover{
+             transition:.6s;
+             background:#046070;
+             color:white;
+}
+.submit{
+   text-style-type:none;
+   text-decoration:none;
+   text-align:center;
+   font-size:1em;
+   position:absolute;
+   background-color:#02f022;
+   border-radius:20px;
+   padding:10px;
+   top:89%;
+   left:25%;
+   display:block;
+   font-weight:bold;
+   width:52%;
+   margin:0px;
+   color:black;
+   outline:none;
+}
+.submit:hover{
+       transition:.6s;
+       color:white;
+       background-color:#046070;
+}
+.appoit{
+               background:red;
+               border-radious:15px;
+               border:3px solid black;
+          }
+.innerhtml{
+                   color:blue;
+                   font-size:xx-large;
+}
+
+

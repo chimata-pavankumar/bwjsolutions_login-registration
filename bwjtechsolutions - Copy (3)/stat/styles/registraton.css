@@ -1,0 +1,140 @@
+
+        .h{
+            font-family:'Lucida Console',Sans-serif;
+            transform:translate(20%,-180%);
+            position:absolute;
+            font-size:2em;
+            color:black;
+            filter:blur(2px);
+            text-shadow: 4px 2px 15px white;
+        }
+        
+        .registration_{
+             background-color:black;
+             padding:50px;
+             top:30%;
+             margin-left:38%;
+             margin-right:50%;
+             position:absolute;
+             width:15%;
+             border:5px solid blue;
+             border-radius:40px;
+        }
+        
+        .user_name{
+              background-color:#000;
+              opacity:.4;
+              color:white;
+              text-align:center;
+              font-size:1em;
+              border-radius:40px;
+              padding:10px;
+              margin: 25px 10px 10px ;
+              width:80%;
+              border:3px solid blue;
+        }
+        .first_name{
+             background-color:#000;
+             opacity:.4;
+             color:white;
+             text-align:center;
+             font-size:1em;
+             border-radius:40px;
+             padding:10px;
+             margin: 15px 10px;
+             width:80%;
+             outline:none;
+             border:3px solid blue;
+        }
+        .last_name{
+             background-color:#000;
+             opacity:.4;
+             color:white;
+             text-align:center;
+             font-size:1em;
+             border-radius:40px;
+             padding:10px;
+             margin: 15px 10px;
+             width:80%;
+             outline:none;
+             border:3px solid blue;
+        }
+         .email{
+             background-color:#000;
+             opacity:.4;
+             color:white;
+             text-align:center;
+             font-size:1em;
+             border-radius:40px;
+             padding:10px;
+             margin: 15px 10px;
+             width:80%;
+             outline:none;
+             border:3px solid blue;
+         }
+        .pas{
+             background-color:#000;
+             opacity:.4;
+             color:white;
+             text-align:center;
+             font-size:1em;
+             border-radius:40px;
+             padding:10px;
+             margin: 15px 10px;
+             width:80%;
+             outline:none;
+             border:3px solid blue;
+        }
+        .pass{
+             background-color:#000;
+             opacity:.4;
+             color:white;
+             text-align:center;
+             font-size:1em;
+             border-radius:40px;
+             padding:10px;
+             margin: 15px 10px;
+             width:80%;
+             outline:none;
+             border:3px solid blue;
+        }
+        
+        .submit{
+               position:relative;
+               background:#736c6c;
+               outline:none;
+               margin: 20px 15px;
+               width:90%;
+               border:none;
+               font-size:1em;
+               padding-top:10px;
+               padding-bottom:10px;
+               border-radius:40px;
+               overflow:hidden;
+        }
+        .forget{
+                float:right;
+                color:blue;
+                text-decoration:none;
+        }
+         .forge{
+                float:right;
+                color:blue;
+                text-decoration:none;
+        }
+        .submit:hover{
+                 transition:.6s;
+                 background:#524e4e;
+                 color:white;
+        }
+        .submi:hover{
+                 transition:.6s;
+                 background:#524e4e;
+                 color:white;
+        }
+        .mess{
+                  color:bule;
+                  position:absolute;
+                  top:80%;
+                  left:40%;
+        }

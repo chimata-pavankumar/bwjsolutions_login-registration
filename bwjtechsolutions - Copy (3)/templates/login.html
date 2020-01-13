@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel='stylesheet' href="{% static 'styles/register.css' %}">
+</head>
+<body>
+<form action='login_' method='POST'>
+{% csrf_token %} 
+<div class='form'>
+    <div class='txtp'>
+    <input type='email' id='email' class='user' name='email' placeholder='email'><br><br>
+    <div class=email></div>
+    <input type = 'password' id='password' class='pass' name='password' placeholder='password'><br><br>
+    <div class=password></div>
+    <input type='submit' value='Login' id='submit' class= 'submi'>
+    <div class='txt'><a href='/'>Register</a> <a href='#'>Forget password</a></div>
+    </div>
+</div>
+</form>
+
+<div id="dialog">
+    <div class='success'></div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#dialog').dialog({
+                title:'bwjtech solutions login',
+                draggable: false,
+                resizable: false,
+                closeOnEscape:false,
+                model:true,
+                autoOpen : false
+        });
+        $('#submit').click(function(e) {
+            e.preventDefault()
+            var token = '{{csrf_token}}';
+            $.ajax({
+                async: true,
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: 'login_',
+                dataType: 'json',
+                data: {
+                    'password'  :  $('#password').val(),
+                    'email'      :  $('#email').val()
+                },
+                success: function(data) {
+                    if (data=='password incorrect'){
+                        $('.password').text(data);
+                        $('.email').empty();
+                    }else if (data=='email not exists'){
+                        $('.email').text(data);
+                        $('.password').empty();
+                    }else{
+                        $('.success').text(data);
+                        $('#dialog').dialog("open");
+                        $('.email').empty();
+                        $('.password').empty();
+                    }
+                },
+                error: function() {
+                    console.log('error in sending');
+                },
+            });
+        });
+        
+        $('.email').css({
+            'position':'absolute',
+            'margin-top':'-7%',
+            'margin-left':'33%',
+            'padding-button':'2%',
+            'color':'red',
+            'text-shadow':'0px 1px 1px red'
+        }),
+        $('.password').css({
+            'position':'absolute',
+            'margin-top':'-5%',
+            'margin-left':'33%',
+            'padding-button':'2%',
+            'color':'red',
+            'text-shadow':'0px 1px 1px red'
+        }),
+
+        $('.form').css({
+            'position':'absolute',
+            'margin-top':'14%',
+            'width':'25%',
+            'height':'300px',
+            'border':'2px solid white',
+            'margin-left':'35%',
+            'margin-right':'10%',
+            'margin-top':'12%',
+            'background-color':'white',
+            'border-radius':'10px',
+            'z-index': '-1', 
+           '-webkit-box-shadow': '0 15px 20px rgba(0, 0, 0, 0.3)',
+           '-moz-box-shadow': '0 15px 20px rgba(0, 0, 0, 0.3)',
+            'box-shadow': '0 15px 20px rgba(0, 0, 0, 0.3)'
+        }),
+        $('.txtp').css({
+            'margin-top':'15%'
+        }),
+        
+        $('.txt').css({
+            'margin-top':'13%',
+            'text-align':'center'
+        }),
+    
+        $("input[type='email'],input[type='password']").button().css({
+            'margin-left':'15%',
+            'position':'relative',
+            'background-color':'white',
+            'border-radius':'5px',
+            'outline':'none'
+        }),
+        
+        $("input[type='email']").button().css({
+            'margin-top':'10%',
+            'margin-bottom':'3%'
+        }),
+        
+        $("input[type='submit']").button().css({
+            'margin-top':'2%',
+            'margin-left':'15%',
+            'background-color':'#0080FA',
+            'color':'white',
+            'font-weight': 'bold',
+            'width':'67%'
+        }),
+        $('.messlog').css({
+            'position':'absolute',
+            'margin-top':'15%',
+            'margin-left':'39.5%',
+            'color':'red',
+            'text-shadow':'0px 1px 1px red'
+        })
+    });
+</script>
+</body>
+</html>
